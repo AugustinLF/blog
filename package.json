@@ -37,7 +37,7 @@
   "devDependencies": {
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "augustinlf.com",
   "keywords": [
     "blog"
   ],
@@ -53,6 +53,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "now-build": "npm run build"
+    "now-build": "npm run build",
+    "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) augustinlf.com"
   }
 }
