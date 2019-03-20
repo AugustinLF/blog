@@ -2,7 +2,10 @@
     "version": 2,
     "name": "blog",
     "builds": [
-        { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
-    ],
-    "alias": "augustinlf.com"
+        {
+            "src": "package.json",
+            "use": "@now/static-build",
+            "config": { "distDir": "./public" }
+        }
+    ]
 }
