@@ -30,6 +30,15 @@ class BlogPostTemplate extends React.Component {
                     {post.frontmatter.date}
                 </p>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                {post.frontmatter.originalPost && (
+                    <p style={{ marginTop: 20 }}>
+                        This is a repost. It was originally posted{' '}
+                        <a href={post.frontmatter.originalPost} rel="canonical">
+                            there
+                        </a>
+                        .
+                    </p>
+                )}
                 <hr
                     style={{
                         marginBottom: rhythm(1),
@@ -84,6 +93,7 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
                 description
+                originalPost
             }
         }
     }
