@@ -1,6 +1,6 @@
 ---
 title: The <TestProvider /> pattern
-date: '2019-04-15T18:00:00.284Z'
+date: '2019-04-17T18:00:00.284Z'
 description: How to make it easy to render your React components in your tests
 ---
 
