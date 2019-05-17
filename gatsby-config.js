@@ -59,8 +59,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Gatsby Starter Blog`,
-                short_name: `GatsbyJS`,
+                name: `Augustin Le Fèvre's blog`,
+                short_name: `Augustin's blog`,
                 start_url: `/`,
                 background_color: `#ffffff`,
                 theme_color: `#663399`,
@@ -70,11 +70,6 @@ module.exports = {
         },
         `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
-        {
-            resolve: `gatsby-plugin-typography`,
-            options: {
-                pathToConfigModule: `src/utils/typography`,
-            },
-        },
+        `gatsby-plugin-emotion`,
     ],
 };

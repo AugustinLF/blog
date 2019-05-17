@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import styled from '@emotion/styled';
+import { Global, css } from '@emotion/core';
 
-import { rhythm, scale } from '../utils/typography';
+import { scaleText } from '../utils/typography';
+
+const BlogTitle = styled.h1`
+    margin-top: 0;
+    font-size: ${scaleText(3)};
+    margin-bottom: 24px;
+`;
 
 class Layout extends React.Component {
     render() {
@@ -11,13 +19,7 @@ class Layout extends React.Component {
 
         if (location.pathname === rootPath) {
             header = (
-                <h1
-                    style={{
-                        ...scale(1.5),
-                        marginBottom: rhythm(1.5),
-                        marginTop: 0,
-                    }}
-                >
+                <BlogTitle>
                     <Link
                         style={{
                             boxShadow: `none`,
@@ -28,13 +30,12 @@ class Layout extends React.Component {
                     >
                         {title}
                     </Link>
-                </h1>
+                </BlogTitle>
             );
         } else {
             header = (
                 <h3
                     style={{
-                        fontFamily: `Montserrat, sans-serif`,
                         marginTop: 0,
                     }}
                 >
@@ -44,7 +45,7 @@ class Layout extends React.Component {
                             textDecoration: `none`,
                             color: `inherit`,
                         }}
-                        to={`/`}
+                        to="/"
                     >
                         {title}
                     </Link>
@@ -56,10 +57,19 @@ class Layout extends React.Component {
                 style={{
                     marginLeft: `auto`,
                     marginRight: `auto`,
-                    maxWidth: rhythm(28),
-                    padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+                    maxWidth: '49rem',
+                    padding: '2.625rem 1.3125rem',
                 }}
             >
+                <Global
+                    styles={css`
+                        body {
+                            font-family: sans-serif;
+                            font-size: 16px;
+                            line-height: 1.75;
+                        }
+                    `}
+                />
                 <header>{header}</header>
                 <main>{children}</main>
                 <footer>
