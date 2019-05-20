@@ -1,6 +1,7 @@
 ---
 title: Becoming a better developer
 date: '2019-02-26T22:23:38.284Z'
+type: blogPost
 ---
 
 A couple of weeks ago a colleague of mine wanted some advice. The question, which we should all ask ourselves, was "How can I become a better developer?". I am a front-end developer, and will speak from my experience, but my goal with this post is too be as general as possible. Since I believe that libraries, framework and languages are just _implementation details_ (more on that later), even if you're not a front-end developer, you might still learn something.

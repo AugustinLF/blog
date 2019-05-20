@@ -3,6 +3,7 @@ title: What I like to ask in JavaScript interviews
 date: '2018-08-24T22:12:03.284Z'
 description: Interviewing is super interesting. But not easy. Here are some things that helped
 originalPost: https://medium.com/@AugustinLF/what-i-like-to-ask-in-javascript-interviews-414253027719
+type: blogPost
 ---
 
 About a year ago, I started interviewing junior developers for front-end positions. We work with a “modern” stack (react, graphql, node and so on), but knew it would be hard to find people with this experience. Training people to use React is not a problem, but we still do expect a certain understanding of JavaScript. We met people who use JavaScript, but never dug into the language. Some are just discovering the language, many come from other languages and learnt to use JS on the fly.

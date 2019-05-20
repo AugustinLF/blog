@@ -2,6 +2,7 @@
 title: Writing codemods to transform your codebase
 date: '2019-05-19T18:00:00.284Z'
 description: How you can use scripts to do large scale refactoring with jscodeshift
+type: blogPost
 ---
 
 This is the write up of a talk I gave at [Paris.js #84](https://parisjs.org/meetup/2019-04-24). The slides can be found [there](https://github.com/AugustinLF/talk-codemods-paris-js). And if you prefer a video of me going through this topic, in French, here's the [link](https://www.youtube.com/watch?v=sWN7b4g_HMg).

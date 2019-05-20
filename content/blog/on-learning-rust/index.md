@@ -3,6 +3,7 @@ title: On learning Rust
 date: '2018-05-16T22:12:03.284Z'
 description: First impressions after learning a bit of Rust.
 originalPost: https://medium.com/@AugustinLF/on-learning-rust-69ba956a63e3
+type: blogPost
 ---
 
 I solely code in JavaScript, focusing on front end stuff. It gets a bit boring, so once in a while, I try a new language. I tried OCaml a year ago, and got really impressed by the powerful type inference, and really liked the functional features (pattern matching, pipe operator, maybes), but I found the developer experience underwhelming. People complain about npm and webpack, but I felt extremely powerless when trying to properly build an app (I was interested in learning OCaml, not makefiles and a compiler toolchain) with dependencies (which gets necessary quite rapidly since the standard library is pretty small). Moreover, the syntax is hard. I guess you get used to it, but it requires a lot of energy to understand what that code block means (I guess that ReasonML is an improvement there). So I got frustrated and stopped playing with it (the lack of “things to do with OCaml” probably didn’t help).
