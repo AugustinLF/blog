@@ -3,6 +3,7 @@ title: Getting Flow to agree with your types
 date: '2018-10-17T22:12:03.284Z'
 description: Quick tips to become more productive with Flow
 originalPost: https://medium.com/@AugustinLF/making-flow-agree-with-your-types-be43594447c
+type: blogPost
 ---
 
 Flow is notoriously hard to use. I believe in the importance of strong static type-checkers. I have been using flow for about two years and don’t regret it, but flow requires too much understanding of how it works to make casual people happy using it. Most of the people I worked with, in different companies, on different (react) projects, think that flow is helpful. But they hate it. And they don’t intend to spend, as I did, countless hours following weird stack traces to understand what to do.

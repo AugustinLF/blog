@@ -3,6 +3,7 @@ title: The <TestProvider /> pattern
 htmlTitle: The TestProvider pattern
 date: '2019-04-17T18:00:00.284Z'
 description: How to make it easy to render your React components in your tests
+type: blogPost
 ---
 
 When I started using React, the most common way to test components was to write unit tests using [shallow rendering](https://reactjs.org/docs/shallow-renderer.html). Shallow rendering renders only one level of components. It skips your component's children. The main benefit of this approach is that it’s simpler to write tests. You don’t have to worry about what is bellow in your tree. Don’t worry about your data fetching. And especially, don’t worry about the components connected to a redux store. But since, many people figured that such kind of testing was limited. It is bound to your implementation (read more about testing [implementation details](https://kentcdodds.com/blog/testing-implementation-details)). You add a component somewhere in your tree, and your tests break, even if nothing changed for your user. Moreover, it doesn’t assert that your user will see what they should see.

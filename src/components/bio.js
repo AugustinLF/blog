@@ -27,8 +27,8 @@ function Bio() {
                                 borderRadius: `50%`,
                             }}
                         />
-                        <p>
-                            I'm <strong>{author}</strong>. I work for{' '}
+                        <p style={{ marginTop: 0 }}>
+                            I'm {author}. I work for{' '}
                             <a href="https://www.extia.fr/">Extia</a>, an IT
                             consulting company based in Paris, France. I mostly
                             do front-end development.

@@ -3,6 +3,7 @@ title: Writing and maintaining enterprise software with React
 date: '2018-05-14T22:12:03.284Z'
 description: A couple of things I learnt writing software enterprise
 originalPost: https://medium.com/@Extia/writing-and-maintaining-enterprise-software-with-react-c2fac282f385
+type: blogPost
 ---
 
 Three years ago we started working on Extia’s own software, to support the organisation in its digitalization. I could describe our stack, explain how to use React, Relay, but many people already did so, so I’d rather tell you things I wish I’d have known earlier.
