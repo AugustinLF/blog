@@ -2,52 +2,74 @@ import { Link } from 'gatsby';
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 
+const MenuLink = ({ to, children }) => (
+    <Link
+        css={css`
+            box-shadow: none;
+            text-decoration: none;
+            color: inherit;
+        `}
+        to={to}
+    >
+        {children}
+    </Link>
+);
+
+const SubHeader = () => (
+    <div
+        css={css`
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1.3125rem;
+
+            @media (min-width: 320px) and (max-width: 480px) {
+                height: 48px;
+                background-color: white;
+                color: #13ca91;
+            }
+        `}
+    >
+        <MenuLink to="/resume">resume</MenuLink>
+    </div>
+);
+
 const Header = ({ title }) => (
     <header
         css={css`
-            height: 64px;
-            background-color: #13ca91;
-            color: white;
             align-items: stretch;
-            padding: 0 1.3125rem;
             display: flex;
             justify-content: center;
+            color: white;
         `}
     >
         <div
             css={css`
-                width: 100%;
                 max-width: 49rem;
+                background-color: #13ca91;
                 display: flex;
-                align-items: center;
+                justify-content: center;
+                flex-grow: 1;
+
+                @media (min-width: 320px) and (max-width: 480px) {
+                    flex-direction: column;
+                }
             `}
         >
-            <h1
+            <div
                 css={css`
-                    margin-right: auto;
+                    height: 64px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 1.3125rem;
                 `}
             >
-                <Link
-                    css={css`
-                        box-shadow: none;
-                        text-decoration: none;
-                        color: inherit;
-                    `}
-                    to="/"
-                >
-                    {title}
-                </Link>
-            </h1>
-            <Link
-                css={css`
-                    box-shadow: none;
-                    text-decoration: none;
-                    color: inherit;
-                `}
-                to="/resume"
-            >
-                resume
-            </Link>
+                <h1>
+                    <MenuLink to="/">{title}</MenuLink>
+                </h1>
+            </div>
+            <SubHeader />
         </div>
     </header>
 );
