@@ -41,12 +41,12 @@ const Header = ({ title }) => (
             display: flex;
             justify-content: center;
             color: white;
+            background-color: #13ca91;
         `}
     >
         <div
             css={css`
                 max-width: 49rem;
-                background-color: #13ca91;
                 display: flex;
                 justify-content: center;
                 flex-grow: 1;
@@ -59,10 +59,13 @@ const Header = ({ title }) => (
             <div
                 css={css`
                     height: 64px;
-                    width: 100%;
                     display: flex;
                     align-items: center;
                     padding: 0 1.3125rem;
+
+                    @media (min-width: 480px) {
+                        width: 100%;
+                    }
                 `}
             >
                 <h1>
