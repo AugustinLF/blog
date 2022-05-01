@@ -1,10 +1,18 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
-class NotFoundPage extends React.Component {
+type NotFoundPageQuery = {
+    site: {
+        siteMetadata: {
+            title: string;
+        };
+    };
+};
+
+class NotFoundPage extends React.Component<PageProps<NotFoundPageQuery>> {
     render() {
         const { data } = this.props;
         const siteTitle = data.site.siteMetadata.title;
@@ -24,7 +32,7 @@ class NotFoundPage extends React.Component {
 export default NotFoundPage;
 
 export const pageQuery = graphql`
-    query {
+    query NotFoundPage {
         site {
             siteMetadata {
                 title

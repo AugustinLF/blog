@@ -1,12 +1,36 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react';
+
+const Avatar = () => (
+    <StaticImage
+        src="./avatar.jpeg"
+        alt="Picture of Augustin Le Fèvre"
+        css={css`
+            flex-shrink: 0;
+            margin-right: 0.875rem;
+        `}
+        placeholder="blurred"
+        layout="fixed"
+        width={50}
+        height={50}
+        imgStyle={{
+            borderRadius: `50%`,
+        }}
+    />
+);
+
+type BioQuery = {
+    site: { siteMetadata: { author: string; social: { twitter: string } } };
+};
 
 function Bio() {
     return (
         <StaticQuery
             query={bioQuery}
-            render={data => {
+            render={(data: BioQuery) => {
                 const { author, social } = data.site.siteMetadata;
                 return (
                     <div
@@ -14,19 +38,7 @@ function Bio() {
                             display: `flex`,
                         }}
                     >
-                        <StaticImage
-                            src="../../content/assets/avatar.jpeg"
-                            alt={author}
-                            style={{
-                                marginRight: '0.875rem',
-                                marginBottom: 0,
-                                minWidth: 50,
-                                borderRadius: `100%`,
-                            }}
-                            imgStyle={{
-                                borderRadius: `50%`,
-                            }}
-                        />
+                        <Avatar />
                         <p style={{ marginTop: 0 }}>
                             I'm {author}. I work for{' '}
                             <a href="https://www.extia.fr/">Extia</a>, an IT
@@ -45,12 +57,7 @@ function Bio() {
 }
 
 const bioQuery = graphql`
-    query BioQuery {
-        # avatar: file(absolutePath: { regex: "/avatar.jpeg/" }) {
-        #     childImageSharp {
-        #         gatsbyImageData(layout: FIXED)
-        #     }
-        # }
+    query Bio {
         site {
             siteMetadata {
                 author

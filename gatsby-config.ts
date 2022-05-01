@@ -1,14 +1,17 @@
-module.exports = {
+import type { GatsbyConfig } from 'gatsby';
+
+const config: GatsbyConfig = {
     siteMetadata: {
         title: `Augustin's blog`,
         author: `Augustin Le Fèvre`,
         description: `Somewhere to share things I learnt`,
-        siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+        siteUrl: `https://augustinlf.com/`,
         social: {
             twitter: `gusguslf`,
         },
     },
     plugins: [
+        'gatsby-plugin-image',
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -80,3 +83,5 @@ module.exports = {
         `gatsby-plugin-emotion`,
     ],
 };
+
+export default config;

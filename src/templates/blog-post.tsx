@@ -1,11 +1,31 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import type { PageProps } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import type { BlogPostPageContext } from '../../gatsby-node';
 
-class BlogPostTemplate extends React.Component {
+type BlogPostBySlugQuery = {
+    site: { siteMetadata: { title: string; author: string } };
+    markdownRemark: {
+        id: string;
+        excerpt: string;
+        html: string;
+        frontmatter: {
+            title: string;
+            htmlTitle: string;
+            date: any;
+            description: string;
+            originalPost: string;
+        };
+    };
+};
+
+class BlogPostTemplate extends React.Component<
+    PageProps<BlogPostBySlugQuery, BlogPostPageContext>
+> {
     render() {
         const post = this.props.data.markdownRemark;
         const siteTitle = this.props.data.site.siteMetadata.title;
