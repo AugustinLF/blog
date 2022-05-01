@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css, jsx } from '@emotion/react';
 
 import Layout from '../components/layout';
 
