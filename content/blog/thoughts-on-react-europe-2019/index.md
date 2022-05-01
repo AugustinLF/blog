@@ -25,7 +25,7 @@ What struck me was the DX. The whole integration seemed to be on point, the typi
 
 Paul showed how Twitter worked to improve the DX of the devs working on the web application. A key point was to help the devs get feedback faster, by helping them to spot errors that would fail the CI without having to run their whole test-suite. A strong helper was the use of precommit hooks, that would run the tests or the linter on the changed files.
 
-Using Flow helped them to significantly decrease the number of type errors (`undefined is not a function` and other similar errors). Once they reached 50% of type coverage, they got rid of almost all of this category of runtime errors.
+Using Flow helped them to significantly decrease the number of type errors (`undefined is not a function` and other similar errors). Once they reached 50% of type coverage, they got rid of almost all of this category of runtime errors.
 
 ### [Brandon Dail](https://twitter.com/aweary): Scheduling is the Future
 

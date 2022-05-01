@@ -1,5 +1,28 @@
 import type { GatsbyConfig } from 'gatsby';
 
+type FeedsQuery = {
+    site: {
+        siteMetadata: {
+            title: string;
+            description: string;
+            siteUrl: string;
+        };
+    };
+    allMarkdownRemark: {
+        nodes: Array<{
+            excerpt: string;
+            html: string;
+            fields: {
+                slug: string;
+            };
+            frontmatter: {
+                title: string;
+                date: string;
+            };
+        }>;
+    };
+};
+
 const config: GatsbyConfig = {
     siteMetadata: {
         title: `Augustin's blog`,
@@ -58,7 +81,71 @@ const config: GatsbyConfig = {
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        // `gatsby-plugin-feed`,
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
+                {
+                  site {
+                    siteMetadata {
+                      title
+                      description
+                      siteUrl
+                    }
+                  }
+                }
+              `,
+                feeds: [
+                    {
+                        serialize: ({
+                            query: { site, allMarkdownRemark },
+                        }: {
+                            query: FeedsQuery;
+                        }) =>
+                            allMarkdownRemark.nodes
+                                .filter(
+                                    (node) => node.fields.slug !== '/resume/',
+                                )
+                                .map((node) => ({
+                                    ...node.frontmatter,
+                                    description: node.excerpt,
+                                    date: node.frontmatter.date,
+                                    url:
+                                        site.siteMetadata.siteUrl +
+                                        node.fields.slug,
+                                    guid:
+                                        site.siteMetadata.siteUrl +
+                                        node.fields.slug,
+                                    custom_elements: [
+                                        { 'content:encoded': node.html },
+                                    ],
+                                })),
+                        query: `
+                    {
+                      allMarkdownRemark(
+                        sort: { order: DESC, fields: [frontmatter___date] },
+                      ) {
+                        nodes {
+                          excerpt
+                          html
+                          fields {
+                            slug
+                          }
+                          frontmatter {
+                            title
+                            date
+                          }
+                        }
+                      }
+                    }
+                  `,
+                        output: '/rss.xml',
+                        title: "Augustin's blog's RSS Feed",
+                    },
+                ],
+            },
+        },
+        // TODO need an icon
         // {
         //     resolve: `gatsby-plugin-manifest`,
         //     options: {
