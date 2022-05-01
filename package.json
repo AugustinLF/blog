@@ -65,9 +65,9 @@
         "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) augustinlf.com"
     },
     "engines": {
-        "node": ">=16"
+        "node": ">=14"
     },
     "volta": {
-        "node": "16.13.1"
+        "node": "14.19.1"
     }
 }
