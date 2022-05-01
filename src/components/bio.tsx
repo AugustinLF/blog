@@ -11,14 +11,12 @@ const Avatar = () => (
         css={css`
             flex-shrink: 0;
             margin-right: 0.875rem;
+            border-radius: 50%;
         `}
         placeholder="blurred"
         layout="fixed"
         width={50}
         height={50}
-        imgStyle={{
-            borderRadius: `50%`,
-        }}
     />
 );
 
