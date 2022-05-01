@@ -1,4 +1,4 @@
-Software engineer working primarily with JavaScript, React and Node. Been writing production-ready React code for four years. I am looking for a technical position where I can help a strong team deliver great value to our users. Willing to relocate. Contact me at augustin.resume@gmail.com
+Software engineer working primarily with JavaScript, React and Node. Been writing production-ready React code since 2015. Currently happy working at [Klarna](https://www.klarna.com/).
 
 # Technical Expertise
 
@@ -15,7 +15,7 @@ Software engineer working primarily with JavaScript, React and Node. Been writin
 
 ## Extia (Contracting for Club Med) - Front end developer
 
-_Since september 2018_
+_September 2018 - August 2019_
 
 Context: Twenty developers split in feature teams corresponding to the main features of the website clubmed.com (several million users per month). The whole website is a single server-side rendered SPA written in React, consuming GraphQL APIs.
 
@@ -41,7 +41,7 @@ Context: Vamos is a suite of react apps used by the employees of Extia, includin
 
 ## Extia (JavaScript meetup) - Organiser and trainer
 
-_Since January 2016_
+_January 2016 - August 2019_
 
 Context: Extia runs meetups about JavaScript, open to the public.
 

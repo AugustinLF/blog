@@ -41,9 +41,9 @@ function Bio() {
                         <Avatar />
                         <p style={{ marginTop: 0 }}>
                             I'm {author}. I work for{' '}
-                            <a href="https://www.extia.fr/">Extia</a>, an IT
-                            consulting company based in Paris, France. I mostly
-                            do front-end development.
+                            <a href="https://www.klarna.com/">Klarna</a> in
+                            Stockholm, Sweden. I mostly do front-end
+                            development.
                             {` `}
                             <a href={`https://twitter.com/${social.twitter}`}>
                                 Here's my Twitter.
