@@ -1,8 +1,13 @@
+import * as React from 'react'
 import { Link } from 'gatsby';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css, jsx } from '@emotion/react';
 
-const MenuLink = ({ to, children }) => (
+type MenuLinkProps = {
+    to: string,
+    children: React.ReactNode
+}
+const MenuLink = ({ to, children }: MenuLinkProps) => (
     <Link
         css={css`
             box-shadow: none;
@@ -34,7 +39,10 @@ const SubHeader = () => (
     </div>
 );
 
-const Header = ({ title }) => (
+type HeaderProps = {
+    title: string
+}
+const Header = ({ title }: HeaderProps) => (
     <header
         css={css`
             align-items: stretch;

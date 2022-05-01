@@ -1,9 +1,15 @@
 /** @jsx jsx */
-import { Global, css, jsx } from '@emotion/core';
+import { Global, css, jsx } from '@emotion/react';
 
 import Header from './header';
 
-const Layout = ({ title, children, noTopPadding }) => (
+type LayoutProps = {
+    title: string,
+    children: React.ReactNode,
+    noTopPadding?: boolean
+
+}
+const Layout = ({ title, children, noTopPadding }: LayoutProps) => (
     <div>
         <Global
             styles={css`

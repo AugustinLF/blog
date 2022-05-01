@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "lib": ["dom", "esnext"],
+        "jsx": "react-jsx",
+        "jsxImportSource": "@emotion/react",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "./src/**/*",
+        "./gatsby-node.ts",
+        "./gatsby-config.ts",
+        "./plugins/**/*"
+    ]
+}

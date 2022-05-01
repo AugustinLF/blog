@@ -1,10 +1,15 @@
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css, jsx } from '@emotion/react';
 
 import Layout from '../components/layout';
 
-const Resume = props => {
+type ResumeQuery = {
+    site: { siteMetadata: { title: string } };
+    resume: { id: string; html: string };
+};
+
+const Resume = (props: PageProps<ResumeQuery>) => {
     const { resume, site } = props.data;
     const siteTitle = site.siteMetadata.title;
     return (

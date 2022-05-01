@@ -1,19 +1,32 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, PageProps } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
-class BlogIndex extends React.Component {
+type PageQuery = {
+    site: { siteMetadata: { title: string } };
+    blogPosts: {
+        edges: Array<{
+            node: {
+                excerpt: string;
+                fields: { slug: string };
+                frontmatter: { date: any; title: string; description: string };
+            };
+        }>;
+    };
+};
+
+class BlogIndex extends React.Component<PageProps<PageQuery>> {
     render() {
         const { data } = this.props;
         const siteTitle = data.site.siteMetadata.title;
         const posts = data.blogPosts.edges;
 
         return (
-            <Layout location={this.props.location} title={siteTitle}>
-                <SEO
+            <Layout title={siteTitle}>
+                <Seo
                     title="All posts"
                     keywords={[`blog`, `javascript`, `react`, 'development']}
                 />
@@ -56,7 +69,7 @@ class BlogIndex extends React.Component {
 export default BlogIndex;
 
 export const pageQuery = graphql`
-    query {
+    query PageQuery {
         site {
             siteMetadata {
                 title
